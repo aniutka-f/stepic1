@@ -15,3 +15,4 @@ def test_find_add_to_basket_button(browser, link):
     if 'fr' in curr_language:
         time.sleep(30)
     find_buttons = browser.find_elements(By.CSS_SELECTOR, '[class="btn btn-lg btn-primary btn-add-to-basket"]')
+    assert find_buttons, f"Basket button is absent"
